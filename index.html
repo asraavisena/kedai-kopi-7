@@ -12,11 +12,13 @@
 </head>
 <body>
     <header class="header">
+<!-- <img src="img/coffe-bg1.jpg" alt="bg1-kedai-kopi" class="header"> -->
+
         <div class="container">
             <div class="row">
                 <h1 class="col-9">Kedai Kopi-7</h1>
                 <form class="col-3 float-right" action="">
-                    <input class="form-control form-control-lg" type="text" name="name" id="" placeholder="your name">
+                    <input class="form-control form-control-lg" type="text" name="name" id="nameInput" placeholder="Namanya disini kaka" onchange="ubahNama()">
                 </form>
                 <!-- <img src="img/coffe-bg1.jpg" alt="bg1-kedai-kopi" class="header"> -->
             </div>
@@ -25,21 +27,28 @@
 
     <div class="section">
         <div>
-            <h3>Mau Pesan Apa?</h3>
+            <h3 id= 'nameOutput'>Masukin Nama dulu di pojok kanan</h3>
+            <!-- <h3 id =''>dita,Mau Pesan Apa?</h3> -->
         </div>
 
         <form action="" >
+
+
+               <!--buat deletenya :
+<button type="button" class="btn btn-outline-primary" onclick="deleteAll()">Roti Bakar</button>-->
+
             <h4>Coffe</h4>
             <div class="form-group container" name="kopi">
-                <button type="button" class="btn col-2 rounded-lg brown-color" for="kopi">Kopi Hitam</button>
-                <button type="button" class="btn col-2 rounded-lg brown-color" for="kopi">Mocacino</button>
-                <button type="button" class="btn col-2 rounded-lg brown-color" for="kopi">Capucino</button>
+                <button type="button" class="btn col-2 rounded-lg brown-color" for="kopi" id="kopiHitam" onclick="tambahPesnan('kopi hitam')">Kopi Hitam</button>
+                <button type="button" class="btn col-2 rounded-lg brown-color" for="kopi" onclick="tambahPesnan('Mochacino')">Mochacino</button>
+                <button type="button" class="btn col-2 rounded-lg brown-color" for="kopi" onclick="tambahPesnan('Capucino')">Capucino</button>
             </div>
             <h4>Snack</h4>
             <div class="form-group container"  name="snack">
-                <button type="button" class="btn col-2 rounded-lg brown-color"for="snack">Kacang</button>
-                <button type="button" class="btn col-2 rounded-lg brown-color" for="snack">Kentang</button>
-                <button type="button" class="btn col-2 rounded-lg brown-color" for="snack">Roti Bakar</button>
+                <button type="button" class="btn col-2 rounded-lg brown-color" for="snack" onclick="tambahPesnan('Kacang')">Kacang</button>
+                <button type="button" class="btn col-2 rounded-lg brown-color" for="snack" onclick="tambahPesnan('Kentang')">Kentang</button>
+                <button type="button" class="btn col-2 rounded-lg brown-color" for="snack" onclick="tambahPesnan('RotiBakar')">Roti Bakar</button>
+
             </div>
             <h4>Catatan</h4>
             <div class="form-group">
@@ -52,17 +61,16 @@
                 <h4>Pesanan Anda</h4>
             </div>
             <div>
-                <ul>
-                    <li>Kopi Hitam <span>1</span> <span>10000</span></li>
-                    <li>Roti Bakar <span>1</span> <span>5000</span></li>
-                    <li>Total <span>15000</span></li>
-                    <li>Catatan</li>
-                </ul>
+                <ul id="pesanan">
+             
+            </ul>
             </div>
+
         </div>
     </div>
 
 
     <script src="js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
