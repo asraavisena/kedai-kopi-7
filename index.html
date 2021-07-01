@@ -12,12 +12,14 @@
 </head>
 <body>
     <header class="header">
-        <div class="row">
-            <h1 class="text-primary col-9">Kedai Kopi-7</h1>
-            <form class="col-3 float-right" action="">
-                <input type="text" name="name" id="" value="your name">
-            </form>
-            <!-- <img src="img/coffe-bg1.jpg" alt="bg1-kedai-kopi" class="header"> -->
+        <div class="container">
+            <div class="row">
+                <h1 class="col-9">Kedai Kopi-7</h1>
+                <form class="col-3 float-right" action="">
+                    <input class="form-control form-control-lg" type="text" name="name" id="" placeholder="your name">
+                </form>
+                <!-- <img src="img/coffe-bg1.jpg" alt="bg1-kedai-kopi" class="header"> -->
+            </div>
         </div>
     </header>
 
@@ -27,32 +29,36 @@
         </div>
 
         <form action="" >
-            <div class="form-group">
-                <label for="">Coffe</label>
-                <button type="button" class="btn btn-outline-primary">Kopi Hitam</button>
-                <button type="button" class="btn btn-outline-primary">Mocacino</button>
-                <button type="button" class="btn btn-outline-primary">Capucino</button>
+            <h4>Coffe</h4>
+            <div class="form-group container" name="kopi">
+                <button type="button" class="btn col-2 rounded-lg brown-color" for="kopi">Kopi Hitam</button>
+                <button type="button" class="btn col-2 rounded-lg brown-color" for="kopi">Mocacino</button>
+                <button type="button" class="btn col-2 rounded-lg brown-color" for="kopi">Capucino</button>
             </div>
-            <div class="form-group">
-                <label for="">Snack</label>
-                <button type="button" class="btn btn-outline-primary">Kacang</button>
-                <button type="button" class="btn btn-outline-primary">Kentang</button>
-                <button type="button" class="btn btn-outline-primary">Roti Bakar</button>
+            <h4>Snack</h4>
+            <div class="form-group container"  name="snack">
+                <button type="button" class="btn col-2 rounded-lg brown-color"for="snack">Kacang</button>
+                <button type="button" class="btn col-2 rounded-lg brown-color" for="snack">Kentang</button>
+                <button type="button" class="btn col-2 rounded-lg brown-color" for="snack">Roti Bakar</button>
             </div>
+            <h4>Catatan</h4>
             <div class="form-group">
-                <label for="">Catatan</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea id="" cols="30" rows="10" name="catatan"></textarea>
             </div>
         </form>
 
         <div>
-            <h4>Pesanan Anda</h4>
-            <ul>
-                <li>Kopi Hitam <span>1</span> <span>10000</span></li>
-                <li>Roti Bakar <span>1</span> <span>5000</span></li>
-                <li>Total <span>15000</span></li>
-                <li>Catatan</li>
-            </ul>
+            <div>
+                <h4>Pesanan Anda</h4>
+            </div>
+            <div>
+                <ul>
+                    <li>Kopi Hitam <span>1</span> <span>10000</span></li>
+                    <li>Roti Bakar <span>1</span> <span>5000</span></li>
+                    <li>Total <span>15000</span></li>
+                    <li>Catatan</li>
+                </ul>
+            </div>
         </div>
     </div>
 
