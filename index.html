@@ -15,7 +15,7 @@
         <div class="row">
             <h1 class="text-primary col-9">Kedai Kopi-7</h1>
             <form class="col-3 float-right" action="">
-                <input type="text" name="name" id="" value="your name">
+                <input type="text" name="name" id="nameInput" placeholder="your name" onchange="ubahNama()">
             </form>
             <!-- <img src="img/coffe-bg1.jpg" alt="bg1-kedai-kopi" class="header"> -->
         </div>
@@ -23,21 +23,22 @@
 
     <div class="section">
         <div>
-            <h3>Mau Pesan Apa?</h3>
+            <h3 id= 'nameOutput'>Masukin Nama dulu di pojok kanan</h3>
+            <!-- <h3 id =''>dita,Mau Pesan Apa?</h3> -->
         </div>
 
         <form action="" >
             <div class="form-group">
                 <label for="">Coffe</label>
-                <button type="button" class="btn btn-outline-primary">Kopi Hitam</button>
-                <button type="button" class="btn btn-outline-primary">Mocacino</button>
-                <button type="button" class="btn btn-outline-primary">Capucino</button>
+                <button type="button" class="btn btn-outline-primary" id="kopiHitam" onclick="tambahPesnan('kopi hitam')">Kopi Hitam</button>
+                <button type="button" class="btn btn-outline-primary" onclick="tambahPesnan('Mocha')">Mocacino</button>
+                <button type="button" class="btn btn-outline-primary" onclick="tambahPesnan('Capu')">Capucino</button>
             </div>
             <div class="form-group">
                 <label for="">Snack</label>
                 <button type="button" class="btn btn-outline-primary">Kacang</button>
                 <button type="button" class="btn btn-outline-primary">Kentang</button>
-                <button type="button" class="btn btn-outline-primary">Roti Bakar</button>
+                <button type="button" class="btn btn-outline-primary" onclick="deleteAll()">Roti Bakar</button>
             </div>
             <div class="form-group">
                 <label for="">Catatan</label>
@@ -47,16 +48,17 @@
 
         <div>
             <h4>Pesanan Anda</h4>
-            <ul>
-                <li>Kopi Hitam <span>1</span> <span>10000</span></li>
+            <ul id="pesanan">
+                <!-- <li>Kopi Hitam <span>1</span> <span>10000</span></li>
                 <li>Roti Bakar <span>1</span> <span>5000</span></li>
                 <li>Total <span>15000</span></li>
-                <li>Catatan</li>
+                <li>Catatan</li> -->
             </ul>
         </div>
     </div>
 
 
     <script src="js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
