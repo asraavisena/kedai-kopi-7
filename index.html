@@ -12,12 +12,16 @@
 </head>
 <body>
     <header class="header">
-        <div class="row">
-            <h1 class="text-primary col-9">Kedai Kopi-7</h1>
-            <form class="col-3 float-right" action="">
-                <input type="text" name="name" id="nameInput" placeholder="your name" onchange="ubahNama()">
-            </form>
-            <!-- <img src="img/coffe-bg1.jpg" alt="bg1-kedai-kopi" class="header"> -->
+<!-- <img src="img/coffe-bg1.jpg" alt="bg1-kedai-kopi" class="header"> -->
+
+        <div class="container">
+            <div class="row">
+                <h1 class="col-9">Kedai Kopi-7</h1>
+                <form class="col-3 float-right" action="">
+                    <input class="form-control form-control-lg" type="text" name="name" id="nameInput" placeholder="Namanya disini kaka" onchange="ubahNama()">
+                </form>
+                <!-- <img src="img/coffe-bg1.jpg" alt="bg1-kedai-kopi" class="header"> -->
+            </div>
         </div>
     </header>
 
@@ -28,32 +32,40 @@
         </div>
 
         <form action="" >
-            <div class="form-group">
-                <label for="">Coffe</label>
-                <button type="button" class="btn btn-outline-primary" id="kopiHitam" onclick="tambahPesnan('kopi hitam')">Kopi Hitam</button>
-                <button type="button" class="btn btn-outline-primary" onclick="tambahPesnan('Mocha')">Mocacino</button>
-                <button type="button" class="btn btn-outline-primary" onclick="tambahPesnan('Capu')">Capucino</button>
+
+
+               <!--buat deletenya :
+<button type="button" class="btn btn-outline-primary" onclick="deleteAll()">Roti Bakar</button>-->
+
+            <h4>Coffe</h4>
+            <div class="form-group container" name="kopi">
+                <button type="button" class="btn col-2 rounded-lg brown-color" for="kopi" id="kopiHitam" onclick="tambahPesnan('kopi hitam')">Kopi Hitam</button>
+                <button type="button" class="btn col-2 rounded-lg brown-color" for="kopi" onclick="tambahPesnan('Mochacino')">Mochacino</button>
+                <button type="button" class="btn col-2 rounded-lg brown-color" for="kopi" onclick="tambahPesnan('Capucino')">Capucino</button>
             </div>
-            <div class="form-group">
-                <label for="">Snack</label>
-                <button type="button" class="btn btn-outline-primary">Kacang</button>
-                <button type="button" class="btn btn-outline-primary">Kentang</button>
-                <button type="button" class="btn btn-outline-primary" onclick="deleteAll()">Roti Bakar</button>
+            <h4>Snack</h4>
+            <div class="form-group container"  name="snack">
+                <button type="button" class="btn col-2 rounded-lg brown-color" for="snack" onclick="tambahPesnan('Kacang')">Kacang</button>
+                <button type="button" class="btn col-2 rounded-lg brown-color" for="snack" onclick="tambahPesnan('Kentang')">Kentang</button>
+                <button type="button" class="btn col-2 rounded-lg brown-color" for="snack" onclick="tambahPesnan('RotiBakar')">Roti Bakar</button>
+
             </div>
+            <h4>Catatan</h4>
             <div class="form-group">
-                <label for="">Catatan</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea id="" cols="30" rows="10" name="catatan"></textarea>
             </div>
         </form>
 
         <div>
-            <h4>Pesanan Anda</h4>
-            <ul id="pesanan">
-                <!-- <li>Kopi Hitam <span>1</span> <span>10000</span></li>
-                <li>Roti Bakar <span>1</span> <span>5000</span></li>
-                <li>Total <span>15000</span></li>
-                <li>Catatan</li> -->
+            <div>
+                <h4>Pesanan Anda</h4>
+            </div>
+            <div>
+                <ul id="pesanan">
+             
             </ul>
+            </div>
+
         </div>
     </div>
 
