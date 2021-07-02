@@ -131,7 +131,7 @@ function orderConfirm() {
         // document.getElementById('indexpage').style.display = 'none';
         document.getElementById('stepOne').style.display = 'none';
         document.getElementById('deleteAll').style.display = 'none';
-        document.getElementById('orderLagi').style.display = 'block';
+        document.getElementById('orderLagi').style.display = 'inline';
         document.getElementById('orderButton').style.display = 'none';
 
 
