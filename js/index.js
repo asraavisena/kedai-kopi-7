@@ -150,7 +150,7 @@ function orderConfirm() {
         document.getElementById('orderButton').style.display = 'none';
         document.getElementById('pesananOrder').classList.add = 't-2'
         document.getElementById('pesananOrder').style.paddingTop = '100px'
-        document.getElementById('notePesanan').innerHTML = '<h2>Terimakasih<br>Silahkan melakukan pembayaran di kasir<br>Tunggu pesanan anda datang</h2>'
+        document.getElementById('notePesanan').innerHTML = `<h2>Terimakasih ${dataPesanan.nama}<br>Silahkan melakukan pembayaran di kasir<br>Tunggu pesanan anda datang</h2>`
 
 
         }
