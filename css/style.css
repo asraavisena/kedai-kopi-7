@@ -4,17 +4,20 @@
     box-sizing: border-box;
 }
 
-h1{
+#indexpage h1{
     color: #E8E8E8;
 }
-body{
+
+#indexpage {
     background-image:  linear-gradient(#0000005b, #00000098), url("../img/bg1-kedai-kopi.jpeg");
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 150vh;
     width: 100vw;
     background-attachment: fixed;
     position: relative; 
+    margin-top: -30px;
+    /*display: none;*/
 }
 /* body::before {
     content: "";
@@ -26,36 +29,36 @@ body{
     background-color: rgba(0,0,0,0.25);
 } */
 
-header{
+#indexpage header{
     margin: 1.5em 0
 }
-.section{
+#indexpage .section{
     text-align: center;
 }
 
-.brown-color{
+#indexpage .brown-color{
     background-color:#E8E8E8 ;
 }
 
-.brown-color:hover{
+#indexpage .brown-color:hover{
     background-color:#b45613c2; ;
 }
 
-h3, h4, div > ul {
+#indexpage h3, h4, div > ul {
     color:#DCDCDC;
 }
 
-h3 {
+#indexpage h3 {
     margin: 1em 0;
 }
 
-.button-box{
+#indexpage .button-box{
     margin: 0 5%;
     cursor: pointer;
     transition: all .2s;
 }
 
-button:hover {
+#indexpage button:hover {
     transform: translateY(-4px);
     box-shadow: 0 1em 2em rgba(#ffff, .2);
     transition: all .3s;
@@ -63,13 +66,95 @@ button:hover {
 
 }
 
-button:hover::after {
+#indexpage button:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
     color: #DCDCDC;
 }
 
-.alert {
-    /*display: none*/;
-    /*max-width: 360px;*/
+#indexpage .pesananOrder {
+    /*display: none;*/
 }
+
+#indexpage #pesanan {
+    /*display: none;*/
+}
+
+/*PAGE DUA*/
+
+    #pagedua {
+        background: url(https://images.unsplash.com/photo-1588483977150-9c2127ab7bcc?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+        padding: 100px 0px;
+        display: none;
+    }
+
+    #pagedua .font-poppin {
+        font-family: 'Poppins';
+    }
+
+    #pagedua .bg-images {
+        filter: blur(10px);
+    }
+
+    #pagedua li {
+        border-radius: 10px 10px 10px 10px;
+        margin-bottom: 20px;
+        height: 30px;
+        padding: 20px;
+        
+    
+    }
+
+    #pagedua .border {
+        padding: 50px;
+        margin: 10px 500px;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    #pagedua .section{
+        text-align: center;
+    }
+
+    #pagedua li {
+        background-color: white;
+    }
+
+    #pagedua .warna {
+        background-color: rgba(139, 69, 19, 0.92);;
+        background-image: rgba(139, 69, 19, 0.92);;
+
+    }
+
+    #pagedua .font-border {
+        font-size: 20px;
+        padding: 35px 10px;
+        height: 40px;
+        background-color:rgba(139, 69, 19, 0.92);;
+        border-radius: 10px 10px 10px 10px;
+        width: 300px;
+    
+    }
+
+    #pagedua .min {
+        box-sizing: border-box;
+        padding: 0 40%;
+        
+    }
+
+    #pagedua .warna-tulisan {
+        color: white;
+    }
+
+    #pagedua .catatan {
+        height: 60px;
+        border-radius: 25px;
+    }
+
+    #pagedua .border-button {
+        height: 30px;
+        width: 30px;
+    }

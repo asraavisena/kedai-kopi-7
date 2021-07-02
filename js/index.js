@@ -1,5 +1,6 @@
 //G-7 1 JULI 2021
 
+let dataPesanan = {}
 let totalPesanan = {}
 let hargaTotal = 0
 let object = {
@@ -10,6 +11,7 @@ let object = {
     Kentang : 0,
     RotiBakar:0
 }
+
 const menuDanHarga = {
     Coffee : [
 
@@ -24,9 +26,6 @@ const menuDanHarga = {
     ]
 }
 
-
-let dataPesanan = {}
-
 function ubahNama (){
     let nama = document.getElementById("nameInput").value;
     let output = document.getElementById('nameOutput')
@@ -40,8 +39,6 @@ function ubahNama (){
 function tambahPesnan(menu) {
 
     let nama = document.getElementById("nameInput").value;
-    console.log(nama)
-
 
     if (nama === '') {
         alert('Masukin nama dulu kak!!!!')
@@ -71,6 +68,7 @@ function tambahPesnan(menu) {
                         object[selectedItem] = menuDanHarga[menus][j].harga * totalPesanan[selectedItem]
                         html += `<li>${selectedItem} jumlahnya ${totalPesanan[selectedItem]} Rp.${object[selectedItem]} </li><br>`
                         harga += object[selectedItem]
+                        hargaTotal += harga
                     }
                   }
                 }
@@ -79,9 +77,6 @@ function tambahPesnan(menu) {
             html += `<li>Total Harga Rp.${harga} </li><br>`
             pesanan.innerHTML = html;}
     }
-        
-
-
 }
 
 function deleteAll() {
@@ -89,7 +84,6 @@ function deleteAll() {
     let andaYakin = confirm('Apakah anda yakin ?')
 
     if(andaYakin){
-        
         totalPesanan={}
         let pesanan = document.getElementById('pesanan');
 
@@ -99,7 +93,6 @@ function deleteAll() {
         }
         pesanan.innerHTML = html;
     }
-
 }
 
 function catatanPesanan(){
@@ -114,6 +107,15 @@ function catatanPesanan(){
         let output = document.getElementById("catatanOUT")
         output.innerHTML= `CATATAN : ${input}`
         input.innerHTML = 'Makasih kak'
+    }
+}
+
+function orderConfirm() {
+    // body...
+    if (!dataPesanan.nama) {
+        alert('Masukin nama dulu ya kak')
+    }else if(hargaTotal === 0){
+        alert('kamu belum pesan ya ?')
     }
 }
 
