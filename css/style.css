@@ -12,7 +12,7 @@
     background-image:  linear-gradient(#0000005b, #00000098), url("../img/bg1-kedai-kopi.jpeg");
     background-size: cover;
     background-position: center;
-    height: 150vh;
+    height: 130vh;
     width: 100vw;
     background-attachment: fixed;
     position: relative; 
@@ -74,6 +74,7 @@
     box-shadow: 0 1em 2em rgba(#ffff, .2);
     transition: all .3s;
     color: #DCDCDC;
+}
 
 #indexpage ul{
     list-style: none;
@@ -173,5 +174,8 @@
 
 footer > p {
     color: #DCDCDC;
+    text-align: center;
+    background-color: rgba(24, 24, 24, 0.836);
+    width: 100vw;
 }
 
