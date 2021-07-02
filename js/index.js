@@ -15,14 +15,14 @@ let object = {
 const menuDanHarga = {
     Coffee : [
 
-        {nama : 'KopiHitam', harga : 10000},
-        {nama : 'Mochacino', harga : 25000},
-        {nama : 'Capucino', harga : 28000},        
+        {nama : 'Kopi Hitam' , id : 'KopiHitam', harga : 10000},
+        {nama : 'Mochachino' , id : 'Mochacino', harga : 25000},
+        {nama : 'Cappucino' , id : 'Capucino', harga : 28000},        
     ],
     Snacks : [
-        {nama : 'Kacang', harga : 10000},
-        {nama : 'Kentang', harga : 25000},
-        {nama : 'RotiBakar', harga : 28000},
+        {nama : 'Kacang', id : 'Kacang', harga : 10000},
+        {nama : 'Kentang'  , id : 'Kentang', harga : 25000},
+        {nama : 'Roti Bakar'  , id : 'RotiBakar', harga : 28000},
     ]
 }
 
@@ -81,10 +81,10 @@ function tambahPesnan(menu) {
             for (let selectedItem in totalPesanan){
                 for(let menus in menuDanHarga){
                   for (let j = 0; j < menuDanHarga[menus].length; j++) {
-                    if (selectedItem === menuDanHarga[menus][j].nama){
+                    if (selectedItem === menuDanHarga[menus][j].id){
                         object[selectedItem] = menuDanHarga[menus][j].harga * totalPesanan[selectedItem]
                         let changeHarga = ubahTampilanHarga(object[selectedItem])
-                        html += `<li>${menuDanHarga[menus][j].nama} jumlahnya ${totalPesanan[selectedItem]} Rp.${changeHarga} </li><br>`
+                        html += `<li><strong>${menuDanHarga[menus][j].nama}</strong> jumlahnya ${totalPesanan[selectedItem]} <strong>Rp ${changeHarga}</strong> </li><br>`
                         harga += object[selectedItem]
                         hargaTotal += harga
                     }
@@ -93,7 +93,7 @@ function tambahPesnan(menu) {
             }
             let finalHarga = ubahTampilanHarga(harga)
             console.log(finalHarga)
-            html += `<li>Total Harga Rp.${finalHarga} </li><br>`
+            html += `<li>Total Harga Rp ${finalHarga} </li><br>`
             pesanan.innerHTML = html;
 
             pesananDua.innerHTML = html;
@@ -150,7 +150,7 @@ function orderConfirm() {
         document.getElementById('orderButton').style.display = 'none';
         document.getElementById('pesananOrder').classList.add = 't-2'
         document.getElementById('pesananOrder').style.paddingTop = '100px'
-        document.getElementById('notePesanan').innerHTML = `<h2>Terimakasih ${dataPesanan.nama}<br>Silahkan melakukan pembayaran di kasir<br>Tunggu pesanan anda datang</h2>`
+        document.getElementById('notePesanan').innerHTML = `<h2>Terimakasih "${dataPesanan.nama}"<br>Silahkan melakukan pembayaran di kasir<br>Tunggu pesanan anda datang</h2>`
 
 
         }

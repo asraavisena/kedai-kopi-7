@@ -13,7 +13,7 @@
     background-image:  linear-gradient(#0000005b, #00000098), url("../img/bg1-kedai-kopi.jpeg");
     background-size: cover;
     background-position: center;
-    height: 200vh;
+    height: 230vh;
     width: 100vw;
     background-attachment: fixed;
     position: relative; 
@@ -22,6 +22,10 @@
     font-family: 'poppins';
 
 }
+
+/*#indexpage .pesananUl li {
+    font-size: 38px;
+}*/
 
 #indexpage header{
     margin: 1.5em 0
