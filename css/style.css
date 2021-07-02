@@ -68,3 +68,8 @@ button:hover::after {
     opacity: 0;
     color: #DCDCDC;
 }
+
+.alert {
+    /*display: none*/;
+    /*max-width: 360px;*/
+}
