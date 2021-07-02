@@ -31,6 +31,7 @@ function ubahNama (){
     let output = document.getElementById('nameOutput')
     output.innerHTML= `${nama}, mau pesan apa?`
     output.innerHTML= `${nama}, Silahkan pesan`
+    totalPesanan.nama = nama // input data nama ke dalam data pesanan
     dataPesanan.nama = nama // input data nama ke dalam data pesanan
     
     return nama
@@ -56,8 +57,10 @@ function tambahPesnan(menu) {
             }else {
             totalPesanan[menu]+=Number(i)
             }
+
             let pesanan = document.getElementById('pesanan');
-            
+            let pesananDua = document.getElementById('catatanOUTDua')
+
             let html = '';
             let harga = 0;
 
@@ -75,7 +78,10 @@ function tambahPesnan(menu) {
             }
 
             html += `<li>Total Harga Rp.${harga} </li><br>`
-            pesanan.innerHTML = html;}
+            pesanan.innerHTML = html;
+
+            pesananDua.innerHTML = html;
+        }
     }
 }
 
@@ -107,6 +113,7 @@ function catatanPesanan(){
         let output = document.getElementById("catatanOUT")
         output.innerHTML= `CATATAN : ${input}`
         input.innerHTML = 'Makasih kak'
+        totalPesanan.catatan = input
     }
 }
 
@@ -114,10 +121,35 @@ function orderConfirm() {
     // body...
     if (!dataPesanan.nama) {
         alert('Masukin nama dulu ya kak')
-    }else if(hargaTotal === 0){
+    }else if (hargaTotal === 0){
         alert('kamu belum pesan ya ?')
+    }
+
+    else {
+
+        // document.getElementById('pagedua').style.display = 'block';
+        // document.getElementById('indexpage').style.display = 'none';
+        document.getElementById('stepOne').style.display = 'none';
+        document.getElementById('deleteAll').style.display = 'none';
+        document.getElementById('orderLagi').style.display = 'block';
+        document.getElementById('orderButton').style.display = 'none';
+
+
+        }
+
+}
+
+function tampilNota(){
+    let input = ''
+    for(let pesanan in totalPesanan){
+        // console.log(pesanan)
+        for(let total in menuDanHarga){
+            if (pesanan === total) {
+
+            console.log('sama')
+            }
+        }
     }
 }
 
-
-// console.log (totalPesanan)
+console.log (totalPesanan)
