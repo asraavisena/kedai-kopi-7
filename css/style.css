@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 #indexpage h1{
     color: #E8E8E8;
 }
@@ -12,7 +13,7 @@
     background-image:  linear-gradient(#0000005b, #00000098), url("../img/bg1-kedai-kopi.jpeg");
     background-size: cover;
     background-position: center;
-    height: 130vh;
+    height: 200vh;
     width: 100vw;
     background-attachment: fixed;
     position: relative; 
@@ -170,6 +171,10 @@
     #pagedua .border-button {
         height: 30px;
         width: 30px;
+    }
+
+    #indexpage #orderLagi {
+        display: none;
     }
 
 footer > p {
