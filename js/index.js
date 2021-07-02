@@ -26,6 +26,20 @@ const menuDanHarga = {
     ]
 }
 
+function ubahTampilanHarga (hargatotal){
+
+    let bilangan = hargatotal;
+        
+    let reverse = bilangan.toString().split('').reverse().join(''),
+    ribuan  = reverse.match(/\d{1,3}/g);
+    ribuan  = ribuan.join('.').split('').reverse().join('');
+
+    return ribuan
+// Cetak hasil  
+    // document.write(ribuan); // Hasil: 23.456.789
+
+}
+
 function ubahNama (){
     let nama = document.getElementById("nameInput").value;
     let output = document.getElementById('nameOutput')
@@ -69,15 +83,17 @@ function tambahPesnan(menu) {
                   for (let j = 0; j < menuDanHarga[menus].length; j++) {
                     if (selectedItem === menuDanHarga[menus][j].nama){
                         object[selectedItem] = menuDanHarga[menus][j].harga * totalPesanan[selectedItem]
-                        html += `<li>${selectedItem} jumlahnya ${totalPesanan[selectedItem]} Rp.${object[selectedItem]} </li><br>`
+                        let changeHarga = ubahTampilanHarga(object[selectedItem])
+                        html += `<li>${menuDanHarga[menus][j].nama} jumlahnya ${totalPesanan[selectedItem]} Rp.${changeHarga} </li><br>`
                         harga += object[selectedItem]
                         hargaTotal += harga
                     }
                   }
                 }
             }
-
-            html += `<li>Total Harga Rp.${harga} </li><br>`
+            let finalHarga = ubahTampilanHarga(harga)
+            console.log(finalHarga)
+            html += `<li>Total Harga Rp.${finalHarga} </li><br>`
             pesanan.innerHTML = html;
 
             pesananDua.innerHTML = html;
@@ -85,7 +101,7 @@ function tambahPesnan(menu) {
     }
 }
 
-function deleteAll() {
+function deleteSemua() {
 
     let andaYakin = confirm('Apakah anda yakin ?')
 
@@ -99,6 +115,7 @@ function deleteAll() {
         }
         pesanan.innerHTML = html;
     }
+
 }
 
 function catatanPesanan(){
@@ -127,12 +144,13 @@ function orderConfirm() {
 
     else {
 
-        // document.getElementById('pagedua').style.display = 'block';
-        // document.getElementById('indexpage').style.display = 'none';
         document.getElementById('stepOne').style.display = 'none';
         document.getElementById('deleteAll').style.display = 'none';
         document.getElementById('orderLagi').style.display = 'inline';
         document.getElementById('orderButton').style.display = 'none';
+        document.getElementById('pesananOrder').classList.add = 't-2'
+        document.getElementById('pesananOrder').style.paddingTop = '100px'
+        document.getElementById('notePesanan').innerHTML = '<h2>Terimakasih<br>Silahkan melakukan pembayaran di kasir<br>Tunggu pesanan anda datang</h2>'
 
 
         }

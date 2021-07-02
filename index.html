@@ -66,9 +66,9 @@
 
         </div>
           
-            <div class="pesananOrder section">
+            <div id="pesananOrder" class="pesananOrder section">
                 <div>
-                    <h4 class="my-5">Pesanan Anda</h4>
+                    <h4 id="notePesanan" class="my-5">Pesanan Anda</h4>
                 </div>
                 <div>
                     <ul>
@@ -77,21 +77,21 @@
 
                     <!-- tembat catatan -->
                     <div>
-                        <p id= 'catatanOUT' style="color : white;">Catatan : Belum ada catatan ?</p>
+                        <p id= 'catatanOUT' style="color : white;">Tidak Ada Catatan</p>
                     </div>
                 </div>
                 <form>
                     <input class="btn rounded-pill btn-primary mx-5" type="button" name="" id="orderButton" value="Order" onclick="orderConfirm(); tampilNota()">
 
-                    <input class="btn rounded-pill btn-danger mx-5" type="button" name="" id="deleteAll" value="Cancel" onclick="deleteAll()">
+                    <input class="btn rounded-pill btn-danger mx-5" type="button" name="" id="deleteAll" value="Cancel" onclick="deleteSemua()">
 
-                    <input class="btn rounded-pill btn-danger section" type="button" name="" id="orderLagi" value="Order Lagi ?" onclick="document.location.reload(true)">
                 </form>
+                    <input class="btn rounded-pill btn-danger section mx-auto" type="button" name="" id="orderLagi" value="Order Lagi ?" onclick="document.location.reload(true)">
             </div>
     </div>
 
 
-    <div id="pagedua" onload="tampilNota()">
+<!--     <div id="pagedua" onload="tampilNota()">
       <div class="section font-poppin">
         <div class="min warna-tulisan">
           <p class="font-border">Tunjukan Pesanan Ini Ke Kasir</p>
@@ -109,7 +109,7 @@
           <input type="button" value="Mau pesan lagi?">
       </form>
       
-    </div> 
+    </div>  -->
 
 <!--     <footer class="section">
        <p>Copyright &copy; 2021, Group 7 - batch 14</p>
