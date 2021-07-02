@@ -16,9 +16,9 @@
 
         <div class="container">
             <div class="row">
-                <h1 class="col-9">Kedai Kopi-7</h1>
-                <form class="col-3 float-right" action="">
-                    <input class="form-control form-control-lg" type="text" name="name" id="nameInput" placeholder="Namanya disini kaka" onchange="ubahNama()">
+                <h1 class="col-9 mt-3">Kedai Kopi-7</h1>
+                <form class="col-3 float-right mt-3" action="">
+                    <input class="form-control form-control-lg rounded-pill" type="text" name="name" id="nameInput" placeholder="Namanya disini kaka" onchange="ubahNama()">
                 </form>
                 <!-- <img src="img/coffe-bg1.jpg" alt="bg1-kedai-kopi" class="header"> -->
             </div>
@@ -37,36 +37,46 @@
                <!--buat deletenya :
 <button type="button" class="btn btn-outline-primary" onclick="deleteAll()">Roti Bakar</button>-->
 
-            <h4>Coffe</h4>
-            <div class="form-group container" name="kopi">
-                <button type="button" class="btn col-2 rounded-lg brown-color" for="kopi" id="kopiHitam" onclick="tambahPesnan('kopi hitam')">Kopi Hitam</button>
-                <button type="button" class="btn col-2 rounded-lg brown-color" for="kopi" onclick="tambahPesnan('Mochacino')">Mochacino</button>
-                <button type="button" class="btn col-2 rounded-lg brown-color" for="kopi" onclick="tambahPesnan('Capucino')">Capucino</button>
+            <div class="mt-3">
+                <h4 >Coffe</h4>
+                <div class="form-group container mt-4" name="kopi">
+                    <button type="button" class="btn col-2 rounded-pill brown-color mx-5" for="kopi" id="kopiHitam" onclick="tambahPesnan('kopi hitam')">Kopi Hitam</button>
+                    <button type="button" class="btn col-2 rounded-pill brown-color mx-5" for="kopi" onclick="tambahPesnan('Mochacino')">Mochacino</button>
+                    <button type="button" class="btn col-2 rounded-pill brown-color mx-5" for="kopi" onclick="tambahPesnan('Capucino')">Capucino</button>
+                </div>
             </div>
-            <h4>Snack</h4>
-            <div class="form-group container"  name="snack">
-                <button type="button" class="btn col-2 rounded-lg brown-color" for="snack" onclick="tambahPesnan('Kacang')">Kacang</button>
-                <button type="button" class="btn col-2 rounded-lg brown-color" for="snack" onclick="tambahPesnan('Kentang')">Kentang</button>
-                <button type="button" class="btn col-2 rounded-lg brown-color" for="snack" onclick="tambahPesnan('RotiBakar')">Roti Bakar</button>
-
+            <div class="mt-5">
+                <h4>Snack</h4>
+                <div class="form-group container mt-4"  name="snack">
+                    <button type="button" class="btn col-2 rounded-pill brown-color mx-5" for="snack" onclick="tambahPesnan('Kacang')">Kacang</button>
+                    <button type="button" class="btn col-2 rounded-pill brown-color mx-5" for="snack" onclick="tambahPesnan('Kentang')">Kentang</button>
+                    <button type="button" class="btn col-2 rounded-pill brown-color mx-5" for="snack" onclick="tambahPesnan('RotiBakar')">Roti Bakar</button>
+    
+                </div>
             </div>
-            <h4>Catatan</h4>
-            <div class="form-group">
-                <textarea id="" cols="30" rows="10" name="catatan"></textarea>
+            <div class="mt-5">
+                <h4>Catatan</h4>
+                <div class="form-group mt-4">
+                    <textarea id="" cols="30" rows="10" name="catatan"></textarea>
+                </div>
             </div>
         </form>
 
         <div>
             <div>
-                <h4>Pesanan Anda</h4>
+                <h4 class="my-5">Pesanan Anda</h4>
             </div>
             <div>
                 <ul id="pesanan">
              
             </ul>
             </div>
-
         </div>
+
+        <form action="">
+            <input class="btn rounded-pill btn-primary mx-5" type="button" name="" id="" value="Order">
+            <input class="btn rounded-pill btn-danger mx-5" type="button" name="" id="" value="Cancel">
+        </form>
     </div>
 
 

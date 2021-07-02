@@ -48,3 +48,23 @@ h3, h4, div > ul {
 h3 {
     margin: 1em 0;
 }
+
+.button-box{
+    margin: 0 5%;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1em 2em rgba(#ffff, .2);
+    transition: all .3s;
+    color: #DCDCDC;
+
+}
+
+button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+    color: #DCDCDC;
+}
