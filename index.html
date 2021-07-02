@@ -28,37 +28,36 @@
     <div class="section">
         <div>
             <h3 id= 'nameOutput'>Masukin Nama dulu di pojok kanan</h3>
-            <!-- <h3 id =''>dita,Mau Pesan Apa?</h3> -->
         </div>
 
-        <form action="" >
+        <form>
 
 
                <!--buat deletenya :
-<button type="button" class="btn btn-outline-primary" onclick="deleteAll()">Roti Bakar</button>-->
+            <button type="button" class="btn btn-outline-primary" onclick="deleteAll()">Roti Bakar</button>-->
 
             <div class="mt-3">
-                <h4 >Coffe</h4>
-                <div class="form-group container mt-4" name="kopi">
-                    <button type="button" class="btn col-2 rounded-pill brown-color mx-5" for="kopi" id="kopiHitam" onclick="tambahPesnan('kopi hitam')">Kopi Hitam</button>
-                    <button type="button" class="btn col-2 rounded-pill brown-color mx-5" for="kopi" onclick="tambahPesnan('Mochacino')">Mochacino</button>
-                    <button type="button" class="btn col-2 rounded-pill brown-color mx-5" for="kopi" onclick="tambahPesnan('Capucino')">Capucino</button>
-                </div>
+              <h4>Coffe</h4>
+              <div class="form-group container mt-4" name="kopi">
+                  <button type="button" class="btn col-2 rounded-pill brown-color mx-5" id="kopiHitam" for="kopi" onclick="tambahPesnan('KopiHitam')">Kopi Hitam</button>
+                  <button type="button" class="btn col-2 rounded-pill brown-color mx-5" for="kopi" onclick="tambahPesnan('Mochacino')">Mochacino</button>
+                  <button type="button" class="btn col-2 rounded-pill brown-color mx-5" for="kopi" onclick="tambahPesnan('Capucino')">Capucino</button>
+              </div>
             </div>
             <div class="mt-5">
-                <h4>Snack</h4>
-                <div class="form-group container mt-4"  name="snack">
-                    <button type="button" class="btn col-2 rounded-pill brown-color mx-5" for="snack" onclick="tambahPesnan('Kacang')">Kacang</button>
-                    <button type="button" class="btn col-2 rounded-pill brown-color mx-5" for="snack" onclick="tambahPesnan('Kentang')">Kentang</button>
-                    <button type="button" class="btn col-2 rounded-pill brown-color mx-5" for="snack" onclick="tambahPesnan('RotiBakar')">Roti Bakar</button>
-    
-                </div>
+              <h4>Snack</h
+              <div class="form-group container"  name="snack" id = "snack">
+                  <button type="button" class="btn col-2 rounded-pill brown-color mx-5" for="snack" onclick="tambahPesnan('Kacang')">Kacang</button>
+                  <button type="button" class="btn col-2 rounded-pill brown-color mx-5" for="snack" onclick="tambahPesnan('Kentang')">Kentang</button>
+                  <button type="button" class="btn col-2 rounded-pill brown-color mx-5" for="snack" onclick="tambahPesnan('RotiBakar')">Roti Bakar</button>
+              </div>
             </div>
             <div class="mt-5">
-                <h4>Catatan</h4>
-                <div class="form-group mt-4">
-                    <textarea id="" cols="30" rows="10" name="catatan"></textarea>
-                </div>
+            <h4>Catatan</h4>
+              <div class="form-group" >
+                  <textarea cols="30" rows="5" name="catatan" id = "catatanIN" onchange = "catatanPesanan()"></textarea>
+              </div>
+
             </div>
         </form>
 
@@ -67,9 +66,14 @@
                 <h4 class="my-5">Pesanan Anda</h4>
             </div>
             <div>
-                <ul id="pesanan">
+                <ul>
+                    <li id="pesanan"></li>
              
             </ul>
+            <!-- tembat catatan -->
+            <div id = "">
+                <p id= 'catatanOUT' style="color : white;">Catatan : Belum ada catatan ?</p>
+            </div>
             </div>
         </div>
 
@@ -82,5 +86,6 @@
 
     <script src="js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>
+    <script src="front.js"></script>
 </body>
 </html>
