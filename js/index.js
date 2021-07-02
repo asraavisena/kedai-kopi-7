@@ -85,14 +85,21 @@ function tambahPesnan(menu) {
 }
 
 function deleteAll() {
-    totalPesanan={}
-    let pesanan = document.getElementById('pesanan');
 
-        let html = '';
-        for (let key in totalPesanan) {
-        html += `<li>${key} jumlahnya ${totalPesanan[key]}</li><br>`
+    let andaYakin = confirm('Apakah anda yakin ?')
+
+    if(andaYakin){
+        
+        totalPesanan={}
+        let pesanan = document.getElementById('pesanan');
+
+            let html = '';
+            for (let key in totalPesanan) {
+            html += `<li>${key} jumlahnya ${totalPesanan[key]}</li><br>`
+        }
+        pesanan.innerHTML = html;
     }
-    pesanan.innerHTML = html;
+
 }
 
 function catatanPesanan(){

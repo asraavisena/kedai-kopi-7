@@ -74,3 +74,9 @@ ul{
     border-radius: 25px;
     padding:20px;
 }
+
+button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+    color: #DCDCDC;
+}
