@@ -28,31 +28,36 @@
     <div class="section">
         <div>
             <h3 id= 'nameOutput'>Masukin Nama dulu di pojok kanan</h3>
-            <!-- <h3 id =''>dita,Mau Pesan Apa?</h3> -->
         </div>
 
-        <form action="" >
+        <form>
 
 
                <!--buat deletenya :
-<button type="button" class="btn btn-outline-primary" onclick="deleteAll()">Roti Bakar</button>-->
+            <button type="button" class="btn btn-outline-primary" onclick="deleteAll()">Roti Bakar</button>-->
 
             <h4>Coffe</h4>
             <div class="form-group container" name="kopi">
-                <button type="button" class="btn col-2 rounded-lg brown-color" for="kopi" id="kopiHitam" onclick="tambahPesnan('kopi hitam')">Kopi Hitam</button>
+                <button type="button" class="btn col-2 rounded-lg brown-color" id="kopiHitam" for="kopi" onclick="tambahPesnan('KopiHitam')">Kopi Hitam</button>
+                <div class="btn col-1"></div>
                 <button type="button" class="btn col-2 rounded-lg brown-color" for="kopi" onclick="tambahPesnan('Mochacino')">Mochacino</button>
+                <div class="btn col-1"></div>
                 <button type="button" class="btn col-2 rounded-lg brown-color" for="kopi" onclick="tambahPesnan('Capucino')">Capucino</button>
             </div>
             <h4>Snack</h4>
-            <div class="form-group container"  name="snack">
+            <div class="form-group container"  name="snack" id = "snack">
                 <button type="button" class="btn col-2 rounded-lg brown-color" for="snack" onclick="tambahPesnan('Kacang')">Kacang</button>
+                <div class="btn col-1"></div>
                 <button type="button" class="btn col-2 rounded-lg brown-color" for="snack" onclick="tambahPesnan('Kentang')">Kentang</button>
+                <div class="btn col-1"></div>
                 <button type="button" class="btn col-2 rounded-lg brown-color" for="snack" onclick="tambahPesnan('RotiBakar')">Roti Bakar</button>
 
             </div>
             <h4>Catatan</h4>
-            <div class="form-group">
-                <textarea id="" cols="30" rows="10" name="catatan"></textarea>
+            <div class="form-group" >
+                <form action="" class="col-3 float-right">
+                <textarea cols="30" rows="5" name="catatan" id = "catatanIN" onchange = "catatanPesanan()"></textarea>
+            </form>
             </div>
         </form>
 
@@ -61,9 +66,14 @@
                 <h4>Pesanan Anda</h4>
             </div>
             <div>
-                <ul id="pesanan">
+                <ul>
+                    <li id="pesanan"></li>
              
             </ul>
+            <!-- tembat catatan -->
+            <div id = "">
+                <p id= 'catatanOUT' style="color : white;">Catatan : Belum ada catatan ?</p>
+            </div>
             </div>
 
         </div>
@@ -72,5 +82,6 @@
 
     <script src="js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>
+    <script src="front.js"></script>
 </body>
 </html>
