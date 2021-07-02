@@ -15,6 +15,7 @@ body{
     width: 100vw;
     background-attachment: fixed;
     position: relative; 
+    font-family: 'poppins';
 }
 /* body::before {
     content: "";
@@ -33,12 +34,28 @@ header{
     text-align: center;
 }
 
-.brown-color{
+.btn-change{
     background-color:#E8E8E8 ;
 }
 
-.brown-color:hover{
-    background-color:#b45613c2; ;
+.btn-change:hover{
+    background-color:#b45613c2; 
+    transform: translateY(-4px);
+    box-shadow: 2px 4px rgba(44, 44, 44, 0.555);
+    transition: all .3s;
+    color: #DCDCDC;
+}
+
+.button-box{
+    margin: 0 5%;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+    color: #DCDCDC;
 }
 
 h3, h4, div > ul {
@@ -49,27 +66,17 @@ h3 {
     margin: 1em 0;
 }
 
-.button-box{
-    margin: 0 5%;
-    cursor: pointer;
-    transition: all .2s;
+ul{
+    list-style: none;
 }
 
-button:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 1em 2em rgba(#ffff, .2);
-    transition: all .3s;
-    color: #DCDCDC;
-
+.border-round{
+    border-radius: 25px;
+    padding:20px;
 }
 
 button:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
     color: #DCDCDC;
-}
-
-.alert {
-    /*display: none*/;
-    /*max-width: 360px;*/
 }
